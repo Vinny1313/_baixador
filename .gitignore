@@ -1,0 +1,11 @@
+# Ignorar executáveis e pastas de bibliotecas
+ffmpeg.exe
+ffprobe.exe
+yt-dlp-2026.02.04/
+ffmpeg-8.0.1-essentials_build/
+__pycache__/
+
+# Ignorar arquivos baixados
+*.mp3
+*.mp4
+*.webm
