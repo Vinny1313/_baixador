@@ -1,15 +1,17 @@
 Markdown
 
-# 📥 Baixador Multimídia CLI (v3.5)
+# 📥 Baixador Profissional CLI (v4.5)
 
-Este é um programa robusto em Python para download de mídias de diversas plataformas (YouTube, Instagram, TikTok, Twitter, etc.). O projeto evoluiu de um script simples para uma ferramenta automatizada com foco em **organização inteligente**, **preservação de metadados** e **portabilidade**.
+Ferramenta avançada em Python para gerenciamento e download de mídias de centenas de plataformas (YouTube, Instagram, TikTok, SoundCloud, etc.). Este projeto evoluiu para uma solução completa com foco em **automação em lote**, **qualidade personalizada** e **inteligência de arquivo**.
 
 ## ✨ Funcionalidades Principais
-* **Multisites:** Suporte a centenas de redes sociais através do motor `yt-dlp`.
-* **Organizador Inteligente:** Separa downloads automaticamente nas pastas `Downloads/Musicas`, `Downloads/Videos` e `Downloads/Playlists`.
-* **Preservação de Álbuns:** Mantém a ordem original das playlists numerando as faixas (ex: 01, 02...).
-* **Tags & Capas:** Embuti automaticamente a capa do álbum (Thumbnail), nome do artista e álbum nos arquivos MP3.
-* **Verificação de Dependências:** Sistema que detecta a ausência do FFmpeg e orienta o usuário sobre a instalação.
+* **Download em Lote:** Processa múltiplos links automaticamente a partir do arquivo `links.txt`.
+* **Seletor de Qualidade:** Escolha entre Alta (320kbps/1080p), Padrão ou Econômica antes de iniciar.
+* **Organizador Inteligente:** Separa downloads automaticamente em `Musicas`, `Videos` e `Playlists`.
+* **Histórico com Logs:** Registro detalhado em JSON com data, título, URL e local do arquivo.
+* **Modo Archive:** O sistema "lembra" o que já foi baixado e pula arquivos repetidos automaticamente.
+* **Tags & Capas:** Embuti capas de álbum (Thumbnail), artista e álbum nos arquivos MP3.
+* **Barra de Progresso:** Visualização dinâmica no terminal com velocidade e tempo restante (ETA).
 
 ---
 
@@ -17,70 +19,63 @@ Este é um programa robusto em Python para download de mídias de diversas plata
 
 ### 1. Pré-requisitos
 * Ter o **Python 3.x** instalado.
-* Baixar os executáveis do **FFmpeg** (`ffmpeg.exe` e `ffprobe.exe`).
+* Possuir os executáveis do **FFmpeg** (`ffmpeg.exe` e `ffprobe.exe`) na pasta raiz.
 
 ### 2. Instalação
-Clone o repositório e instale a biblioteca necessária:
 ```bash
 pip install -r requirements.txt
 
-3. Configuração
-
-Coloque o ffmpeg.exe e o ffprobe.exe na mesma pasta do arquivo app.py.
-4. Execução
+3. Execução
 Bash
 
 python app.py
 
 📜 Histórico de Versões
-v1.0 - O Início
+v1.0 a v3.5 - Fundação e Metadados
 
-    Script básico para download de vídeos e áudios individuais.
+    Scripts básicos, suporte a playlists, organização de pastas e inclusão de capas/tags.
 
-    Desafios iniciais com caminhos de sistema e conversão de formatos.
+v4.0 - Automação em Lote
 
-v2.0 - Suporte a Playlists
+    Implementação da leitura de links.txt para downloads múltiplos sem intervenção manual.
 
-    Implementação da lógica de loops para baixar álbuns completos.
+v4.2 - Controle de Qualidade
 
-    Ajuste de caminhos absolutos para garantir portabilidade entre pastas.
+    Adição de submenu para escolha de bitrate de áudio e resolução de vídeo.
 
-v3.0 - Organizador Inteligente
+v4.4 - Inteligência e Histórico
 
-    Implementação da estrutura automática de diretórios para separar tipos de mídia.
+    Implementação do historico.json e do sistema de archive.txt para evitar duplicatas.
 
-    Lógica de subpastas para manter playlists agrupadas por título.
+v4.5 (Atual) - Experiência Visual
 
-v3.5 (Atual) - Metadados & Portabilidade
-
-    Upgrade Visual: Inclusão de capas de álbum (Thumbnails) nos arquivos.
-
-    Upgrade de Informação: Inclusão de metadados (Artista, Álbum, Ano) via post-processamento.
-
-    Upgrade de Ordem: Numeração automática de faixas seguindo a ordem original da fonte.
-
-    Sistema de Diagnóstico: Verificação proativa da presença do motor FFmpeg.
+    Inclusão de Barra de Progresso dinâmica e otimização do fluxo de logs no terminal.
 
 📂 Estrutura do Repositório
 
-    app.py: Código fonte principal com a lógica de download e interface CLI.
+    app.py: O "coração" do programa com toda a lógica integrada.
 
-    .gitignore: Configurado para ignorar binários pesados, bibliotecas e mídias baixadas.
+    .gitignore: Protege o repositório contra arquivos pesados, logs pessoais e mídias.
 
-    requirements.txt: Lista de dependências necessárias.
+    requirements.txt: Dependência principal (yt-dlp).
 
-    README.md: Documentação completa do projeto.
+    README.md: Documentação atualizada.
 
 Desenvolvido por Vinny1313
 
 
 ---
 
-### Como aplicar no seu GitHub:
-1. Abra o arquivo **README.md** no seu editor.
-2. Apague o que estiver lá e cole este conteúdo.
-3. No terminal, execute:
-   ```powershell
-   git add README.md
-   git commit -m "Documentação final: Detalhamento das funcionalidades e versões"
-   git push origin main
+### Comandos para finalizar no terminal:
+
+Agora, execute estes três comandos para selar o projeto no GitHub:
+
+```powershell
+# 1. Adiciona o README e o código final
+git add .
+
+# 2. Faz o commit da grande atualização v4.5
+git commit -m "Documentação v4.5: Suporte a lote, qualidade, histórico e barra de progresso"
+
+# 3. Envia para o mundo
+git push origin main
