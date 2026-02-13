@@ -1,28 +1,30 @@
-Markdown
+📥 Baixador Multimídia Profissional (v4.6)
 
-# 📥 Baixador Profissional CLI (v4.5)
+Ferramenta avançada em Python para download e gerenciamento de mídias de centenas de plataformas (YouTube, Instagram, TikTok, SoundCloud, etc.). Este projeto evoluiu de um script simples para uma ferramenta robusta com foco em metadados de alta fidelidade, automação e UX de terminal.
+✨ Funcionalidades Principais
 
-Ferramenta avançada em Python para gerenciamento e download de mídias de centenas de plataformas (YouTube, Instagram, TikTok, SoundCloud, etc.). Este projeto evoluiu para uma solução completa com foco em **automação em lote**, **qualidade personalizada** e **inteligência de arquivo**.
+    Metadados Avançados: Injeção cirúrgica de Gênero, Ano e Link da fonte via biblioteca Mutagen.
 
-## ✨ Funcionalidades Principais
-* **Download em Lote:** Processa múltiplos links automaticamente a partir do arquivo `links.txt`.
-* **Seletor de Qualidade:** Escolha entre Alta (320kbps/1080p), Padrão ou Econômica antes de iniciar.
-* **Organizador Inteligente:** Separa downloads automaticamente em `Musicas`, `Videos` e `Playlists`.
-* **Histórico com Logs:** Registro detalhado em JSON com data, título, URL e local do arquivo.
-* **Modo Archive:** O sistema "lembra" o que já foi baixado e pula arquivos repetidos automaticamente.
-* **Tags & Capas:** Embuti capas de álbum (Thumbnail), artista e álbum nos arquivos MP3.
-* **Barra de Progresso:** Visualização dinâmica no terminal com velocidade e tempo restante (ETA).
+    Download em Lote: Processamento automático de múltiplos links via arquivo links.txt.
 
----
+    Seletor de Qualidade: Menus padronizados para escolha de bitrate (até 320kbps) e resolução (até 1080p).
 
-## 🛠️ Como usar em qualquer computador
+    Organizador Inteligente: Separação automática em pastas Musicas, Videos e Playlists.
 
-### 1. Pré-requisitos
-* Ter o **Python 3.x** instalado.
-* Possuir os executáveis do **FFmpeg** (`ffmpeg.exe` e `ffprobe.exe`) na pasta raiz.
+    Histórico & Archive: Registro em JSON e sistema que pula arquivos já baixados automaticamente.
 
-### 2. Instalação
-```bash
+    Interface Dinâmica: Barra de progresso visual com velocidade e tempo restante (ETA).
+
+🛠️ Como usar em qualquer computador
+1. Pré-requisitos
+
+    Ter o Python 3.x instalado.
+
+    Possuir os executáveis do FFmpeg (ffmpeg.exe e ffprobe.exe) na pasta raiz.
+
+2. Instalação
+Bash
+
 pip install -r requirements.txt
 
 3. Execução
@@ -33,49 +35,28 @@ python app.py
 📜 Histórico de Versões
 v1.0 a v3.5 - Fundação e Metadados
 
-    Scripts básicos, suporte a playlists, organização de pastas e inclusão de capas/tags.
+    Scripts básicos, suporte a playlists, organização de pastas e inclusão de capas básicas.
 
-v4.0 - Automação em Lote
+v4.0 a v4.5 - Automação e Interface
 
-    Implementação da leitura de links.txt para downloads múltiplos sem intervenção manual.
+    Implementação de downloads em lote, histórico JSON, modo Archive e Barra de Progresso.
 
-v4.2 - Controle de Qualidade
+v4.6 (Atual) - Refinamento Profissional
 
-    Adição de submenu para escolha de bitrate de áudio e resolução de vídeo.
+    Sincronização ID3: Uso do Mutagen para tags de gênero, ano e comentários.
 
-v4.4 - Inteligência e Histórico
+    Padronização Visual: Menus centralizados com limpeza de tela (CLS) entre ações.
 
-    Implementação do historico.json e do sistema de archive.txt para evitar duplicatas.
-
-v4.5 (Atual) - Experiência Visual
-
-    Inclusão de Barra de Progresso dinâmica e otimização do fluxo de logs no terminal.
+    Estabilidade: Otimização do fluxo de download para evitar arquivos temporários órfãos.
 
 📂 Estrutura do Repositório
 
     app.py: O "coração" do programa com toda a lógica integrada.
 
-    .gitignore: Protege o repositório contra arquivos pesados, logs pessoais e mídias.
+    .gitignore: Protege o repositório contra arquivos pesados, logs e mídias pessoais.
 
-    requirements.txt: Dependência principal (yt-dlp).
+    requirements.txt: Dependências necessárias (yt-dlp, mutagen).
 
-    README.md: Documentação atualizada.
+    README.md: Documentação técnica completa.
 
 Desenvolvido por Vinny1313
-
-
----
-
-### Comandos para finalizar no terminal:
-
-Agora, execute estes três comandos para selar o projeto no GitHub:
-
-```powershell
-# 1. Adiciona o README e o código final
-git add .
-
-# 2. Faz o commit da grande atualização v4.5
-git commit -m "Documentação v4.5: Suporte a lote, qualidade, histórico e barra de progresso"
-
-# 3. Envia para o mundo
-git push origin main
